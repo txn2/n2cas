@@ -34,6 +34,7 @@ type cas struct {
 // specific type
 type CasRows []map[string]interface{}
 
+// Query basic query wrapper for generic data returned as CasRows
 func (c *cas) Query(query string) (CasRows, error) {
 	// call external libs for business logic here
 	q := c.Session.Query(query)
